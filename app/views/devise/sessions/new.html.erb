@@ -4,8 +4,7 @@
     <div id="login-row" class="row justify-content-center align-items-center">
       <div id="login-column" class="col-md-6">
         <div id="login-box" class="col-md-12">
-          <form id="login-form" class="form">
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name),html: {id: 'login-form'}) do |f| %>
 
               <div class="form-group">
                 <%= f.label :email, class: "text-info" %><br/>
@@ -31,7 +30,6 @@
                 <%= render "devise/shared/links" %>
               </div>
             <% end %>
-          </form>
         </div>
       </div>
     </div>
